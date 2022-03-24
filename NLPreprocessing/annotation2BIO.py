@@ -140,6 +140,7 @@ def generate_BIO(sents, entities, file_id="", no_overlap=False, record_pos=False
                 en_s = entity[2][0]
                 en_e = entity[2][1]
                 en_type = entity[1]
+                #TODO overlapped labels won't work here, because once a token is added for an entity label, it will move to next token.
                 if offset_start < en_s and offset_end < en_e:
                     token.append('O')
                 elif offset_start == en_s:

@@ -1,4 +1,4 @@
-run NER
+# run NER
 import sys
 sys.path.append("../ClinicalTransformerNER/")
 sys.path.append("../NLPreprocessing/")

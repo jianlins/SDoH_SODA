@@ -54,7 +54,7 @@ for fid in test_ids:
     shutil.copyfile(txt_fn, txt_fn1)
     shutil.copyfile(ann_fn, ann_fn1)
 
-train_dev_ids = list(train_dev_ids)
+train_dev_ids = sorted(list(train_dev_ids))
 train_ids, dev_ids = train_test_split(train_dev_ids, train_size=0.9, random_state=13, shuffle=True)
 test_bio = "../bio/"+'bio_test_150'
 training_bio = "../bio/"+'bio_training_150'

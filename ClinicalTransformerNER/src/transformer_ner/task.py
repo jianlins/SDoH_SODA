@@ -207,6 +207,8 @@ def train(args, model, train_features, dev_features):
     new_model_dir = Path(args.new_model_dir)
     new_model_dir.mkdir(parents=True, exist_ok=True)
     # save label2idx json in new model directory
+    print('args.label2idx', args.label2idx)
+    print('new_model_dir', new_model_dir)
     json_dump(args.label2idx, new_model_dir / "label2idx.json")
 
     # save base model name to a base_model_name.txt
