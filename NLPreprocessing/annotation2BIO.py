@@ -117,6 +117,7 @@ def generate_BIO(sents, entities, file_id="", no_overlap=False, record_pos=False
      
     if tag_types:
         entities = list(filter(lambda x: x[1] in tag_types, entities))
+        print("filter types only keep: ", tag_types)
 
     if exclude_tag_types:
         entities = list(filter(lambda x: x[1] not in exclude_tag_types, entities))
